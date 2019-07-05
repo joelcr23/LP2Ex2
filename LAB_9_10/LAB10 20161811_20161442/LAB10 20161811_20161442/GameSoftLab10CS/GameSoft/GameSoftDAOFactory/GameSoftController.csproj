@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBEEE37F-60D5-419F-B8ED-D6863885B72C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameSoftController</RootNamespace>
+    <AssemblyName>GameSoftController</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAOFactory.cs" />
+    <Compile Include="DBController.cs" />
+    <Compile Include="MSSQLDAOFactory.cs" />
+    <Compile Include="MySQLDAOFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameSoftConfig\GameSoftConfig.csproj">
+      <Project>{8B228BEB-1CBF-4DA7-A37C-C935B88793C6}</Project>
+      <Name>GameSoftConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameSoftDAO\GameSoftDAO.csproj">
+      <Project>{caedda31-69c8-4b7e-b18c-7f31936336b6}</Project>
+      <Name>GameSoftDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameSoftDev\GameSoftDev.csproj">
+      <Project>{ECC5B681-3E9D-4E4F-8571-D891BB05E8AD}</Project>
+      <Name>GameSoftDev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameSoftMSSQL\GameSoftMSSQL.csproj">
+      <Project>{96491b11-9c72-4339-90b7-3fcafc5a05e2}</Project>
+      <Name>GameSoftMSSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameSoftMySQL\GameSoftMySQL.csproj">
+      <Project>{b22ead37-1a06-4379-a60b-5964977b4019}</Project>
+      <Name>GameSoftMySQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

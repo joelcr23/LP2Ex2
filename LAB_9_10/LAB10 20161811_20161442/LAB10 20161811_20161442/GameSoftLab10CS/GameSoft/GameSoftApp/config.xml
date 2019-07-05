@@ -1,0 +1,11 @@
+<ConnectionParameters>
+  <Server>127.0.0.1</Server>
+  <Database>lp2</Database>
+  <!-- Siglas que pueden ser utilizadas en el campo Type: "mysql" o "mssql"-->
+  <!-- mysql : para base de datos MySQL-->
+  <!-- mssql : para base de datos Microsoft SQL Server-->
+  <Type>mysql</Type>
+  <User>root</User>
+  <Password>123456</Password>
+  <Port>3306</Port>
+</ConnectionParameters>
